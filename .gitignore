@@ -1,0 +1,7 @@
+.vscode/
+*.ini
+*.db
+*.log
+export*.txt
+export*.json
+venv/
