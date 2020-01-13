@@ -259,10 +259,10 @@ class Utils:
 		# Handle comments
 		if submission_type == 'comment':
 			parent_post_idstr = submission['submission'].split('_')[-1] # Remove prefix from submission idstr
-			permalink = 'https://old.reddit.com/r/{}/comments/{}//{}/'.format(submission['subreddit'], parent_post_idstr, idstr)
+			permalink = 'https://old.reddit.com/r/{}/comments/{}//{}/'.format(submission['subreddit'], parent_post_idstr, idstr) # Fuck new reddit
 		# Handle posts
 		elif submission_type == 'post':
-			permalink = 'https://old.reddit.com/r/{}/comments/{}/'.format(submission['subreddit'], idstr)
+			permalink = 'https://old.reddit.com/r/{}/comments/{}/'.format(submission['subreddit'], idstr)  # Fuck new reddit
 
 		if args.use_new_reddit:
 			permalink = permalink.replace('https://old.', 'https://')
