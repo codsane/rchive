@@ -313,9 +313,10 @@ class Utils:
 
 
 if __name__ == '__main__':
-	# Ironically I don\'t believe rchive should archive by default, in the future I'd like to handle different functions the way timesearch does
+	# Ironically I dont believe rchive should archive by default, in the future I'd like to handle different functions the way timesearch does
 	#  i.e. `python rchive.py archive OPTIONS`,
 	#       `python rchive.py export OPTIONS`,
+	#       `python rchive.py` <-- Would simply print --help
 	# 		 etc.
 	if args.skip_archive:
 		logger.warning('--skip-archive passed, not archiving any saved/upvoted posts, not authing with PRAW')
