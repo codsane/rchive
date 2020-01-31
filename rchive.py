@@ -11,11 +11,11 @@ import re
 # ArgumentParser Setup
 parser = argparse.ArgumentParser()
 # Todo – Clean up these arguments with subparsers
-parser.add_argument('--config', default='config.ini', help='Config file to be loaded (default = "config.ini")')
+parser.add_argument('-c', '--config', default='config.ini', help='Config file to be loaded (default = "config.ini")')
 parser.add_argument('-v', '--verbose', help='Set the console logger level to DEBUG', action='store_true')
+parser.add_argument('-e', '--export', help='rchive by default only preserves self posts and comments. In order to archive full URLs and media, you can export the URLs from your rchive database and send them to something like ArchiveBox, Shaarli, etc.', action='store_true')
+parser.add_argument('-f', '--format', help='Format to export URLs to (json, text) (Used in conjunction with --export)')
 parser.add_argument('--skip-archive', help='Skip archive - Use with --export to export database without archiving new saved/upvoted (won\'t connect to PRAW)', action='store_true')
-parser.add_argument('--export', help='rchive by default only preserves self posts and comments. In order to archive full URLs and media, you can export the URLs from your rchive database and send them to something like ArchiveBox, Shaarli, etc.', action='store_true')
-parser.add_argument('--format', help='Format to export URLs to (json, text) (Used in conjunction with --export)')
 parser.add_argument('--include-comment-urls', help='Also include URLs which have been regex\'d out of comments (Optionally used in conjunction with --export)', action='store_true')
 parser.add_argument('--include-selftext-urls', help='Also include URLs which have been regex\'d out of selftext posts (Optionally used in conjunction with --export)', action='store_true')
 parser.add_argument('--use-new-reddit', help='Use new reddit to generate permalinks', action='store_true')
